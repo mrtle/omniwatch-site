@@ -11,130 +11,160 @@
 <meta property="og:image" content="https://omniwatch.tech/og.png">
 <meta property="og:url" content="https://omniwatch.tech/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F6F3EC">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314201B'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23F6F3EC' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2337C28B'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23FFE84A'/%3E%3Crect x='10' y='25' width='44' height='14' fill='%23000'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F3EC;--card:#FFFDF8;--ink:#14201B;--mute:#5C6862;--line:#DDD6C6;--go:#1E6B4F;--go2:#175640;--mint:#37C28B;--hot:#C4472D;--warn:#FBEDE7}
+:root{--paper:#fff;--wash:#F3F5F8;--ink:#0E1A2B;--mute:#55607A;--rule:#D5DAE3;--pen:#1F4FD8;--pen2:#173DAE;--hi:#FFE84A;--black:#000}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif;font-weight:700;line-height:1.06;margin:0;letter-spacing:-.01em}
-a{color:inherit}
-.wrap{max-width:820px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;text-decoration:none}
-.logo i{width:22px;height:22px;border-radius:50%;border:4px solid var(--ink);position:relative;display:block}
-.logo i:after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--mint)}
-nav button{background:none;border:0;color:var(--mute);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
-.hero{padding:30px 0 10px}
-.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--go);margin:0 0 14px}
-h1{font-size:clamp(40px,9.5vw,68px)}
-h1 em{font-style:italic;color:var(--go)}
-.lede{font-size:19px;max-width:36em;margin:18px 0 22px}
-.btn{display:inline-block;background:var(--go);color:#fff;font:700 17px/1 inherit;text-decoration:none;border:0;border-radius:12px;padding:17px 24px;cursor:pointer}
-.btn:hover{background:var(--go2)}
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.btn.sm{font-size:14.5px;padding:11px 14px;border-radius:10px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.5 "Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3,h4{margin:0;font-weight:800;letter-spacing:-.02em;line-height:1.05}
+a{color:var(--pen)}
+:focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:900;font-size:19px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+.logo span{background:var(--black);color:var(--black);border-radius:2px;margin-left:1px;padding:0 1px}
+nav button{background:none;border:0;color:var(--mute);font:inherit;font-size:14.5px;text-decoration:underline;cursor:pointer}
+.hero{display:grid;gap:34px;padding:26px 0 46px}
+h1{font-size:clamp(40px,9.6vw,62px);font-weight:900;letter-spacing:-.035em;line-height:.98}
+.lede{font-size:19px;line-height:1.45;max-width:31em;margin:20px 0 24px}
+.btn{display:inline-block;background:var(--pen);color:#fff;font:700 17px/1 inherit;text-decoration:none;border:0;border-radius:6px;padding:17px 22px;cursor:pointer}
+.btn:hover{background:var(--pen2)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.sm{font-size:14.5px;padding:10px 13px}
 .btn.wide{width:100%;text-align:center}
-.btn[disabled]{background:#B9B3A4;cursor:not-allowed}
-.trust{display:grid;gap:8px;margin:22px 0 0;padding:0;list-style:none;font-size:15px}
-.trust li{padding-left:26px;position:relative}
-.trust li:before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border-radius:50%;background:var(--mint)}
-section{padding:40px 0 4px}
-h2{font-size:clamp(30px,6.5vw,42px);margin-bottom:8px}
-.sub{color:var(--mute);margin:0 0 20px}
-.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:20px;margin:0 0 14px}
-.grid3{display:grid;gap:12px}
-.grid3 h3{font-size:22px;margin-bottom:6px}
-.grid3 p{margin:0;font-size:15.5px;color:var(--mute)}
-form{display:grid;gap:16px}
-.row{display:grid;gap:16px}
-label{display:grid;gap:6px;font-weight:650;font-size:14.5px}
+.trust{margin:22px 0 0;padding:0;list-style:none;font-size:15.5px;color:var(--mute);display:grid;gap:5px}
+.trust b{color:var(--ink);font-weight:700}
+.found{background:var(--wash);border-radius:10px;padding:18px 18px 8px;align-self:start}
+.found .q{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--rule);border-radius:999px;padding:10px 16px;font-size:15px;margin:0 0 6px}
+.found .q:before{content:"";width:13px;height:13px;border:2.5px solid var(--mute);border-radius:50%;flex:none}
+.found ol{list-style:none;margin:0;padding:0}
+.found li{padding:13px 2px;border-top:1.5px solid var(--rule);font-size:15px;line-height:1.4}
+.found li:first-child{border-top:0}
+.found .src{display:block;font-size:12.5px;color:var(--mute)}
+.found .ttl{display:block;color:var(--pen);font-weight:600;font-size:16px;margin:1px 0 2px}
+.found mark{background:var(--hi);color:inherit;padding:0 2px;position:relative;white-space:nowrap}
+.found mark:after{content:"";position:absolute;inset:-1px -1px;background:var(--black);transform:scaleX(0);transform-origin:left;animation:redact .45s cubic-bezier(.6,0,.2,1) forwards;animation-delay:var(--d,1.4s)}
+@keyframes redact{to{transform:scaleX(1)}}
+.found .cap{font-size:13px;color:var(--mute);margin:0;padding:10px 2px 8px;border-top:1.5px solid var(--rule)}
+section{padding:44px 0 6px}
+h2{font-size:clamp(30px,6.4vw,44px);font-weight:900;letter-spacing:-.03em;margin-bottom:10px}
+.sub{color:var(--mute);margin:0 0 22px;max-width:36em}
+.how{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.how li{counter-increment:s;padding:18px 0;border-top:2px solid var(--ink)}
+.how li:before{content:counter(s);font-weight:900;font-size:15px;display:block;margin-bottom:6px;color:var(--pen)}
+.how h3{font-size:22px;margin-bottom:6px}
+.how p{margin:0;color:var(--mute);font-size:15.5px}
+.limits{border-left:4px solid var(--hi);padding:4px 0 4px 16px;margin:22px 0 0;max-width:40em;font-size:16px}
+form.slip{display:grid;gap:22px;border:2px solid var(--ink);border-radius:4px;padding:24px 20px;max-width:760px}
+.row{display:grid;gap:22px}
+label{display:grid;gap:4px;font-weight:700;font-size:14px}
 label small{font-weight:400;color:var(--mute)}
-input[type=text],select,textarea{width:100%;font:400 16.5px/1.35 inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:13px}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--go);outline-offset:1px}
-.check{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:15px}
-.check input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--go)}
+input[type=text],select{width:100%;font:500 17px/1.3 inherit;color:var(--ink);background:transparent;border:0;border-bottom:2px solid var(--ink);border-radius:0;padding:8px 0 7px;appearance:none;-webkit-appearance:none}
+select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230E1A2B' stroke-width='2'/%3E%3C/svg%3E") right 2px center/12px no-repeat;padding-right:22px}
+input[type=text]:focus,select:focus{outline:0;border-bottom-color:var(--pen);box-shadow:0 2px 0 var(--pen)}
+.check{display:flex;gap:11px;align-items:flex-start;font-weight:500;font-size:15.5px;line-height:1.4}
+.check input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--pen)}
 .note{font-size:13.5px;color:var(--mute);margin:0}
-.cat{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:26px 0 10px}
-.chk h3{font-size:21px;margin-bottom:4px}
-.chk p{margin:0 0 12px;font-size:15px;color:var(--mute)}
-.links{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
-.links a{font-size:14px;font-weight:650;text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:8px 12px;background:#fff}
-.links a:hover{background:var(--ink);color:#fff}
-.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.seg button{font:650 14px/1 inherit;padding:11px 4px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
-.seg button.on.clear{background:var(--go);border-color:var(--go);color:#fff}
-.seg button.on.found{background:var(--hot);border-color:var(--hot);color:#fff}
-.seg button.on.skip{background:var(--mute);border-color:var(--mute);color:#fff}
-.addf{display:grid;gap:8px;margin-top:12px;padding:12px;border-radius:12px;background:var(--warn)}
-.fitem{font-size:14px;background:#fff;border-radius:10px;padding:9px 11px;display:flex;justify-content:space-between;gap:10px;word-break:break-all}
-.fitem button{background:none;border:0;color:var(--hot);font:inherit;font-size:13px;cursor:pointer;flex:none}
-.bar{position:sticky;bottom:0;background:var(--ink);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14.5px;z-index:5}
-.bar b{color:var(--mint)}
+.cat{font-size:15px;font-weight:800;color:var(--pen);margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.card{border:2px solid var(--ink);border-radius:4px;padding:20px;margin:0 0 16px}
+.card h3{font-size:20px;margin-bottom:6px}
+.card.chk{border:0;border-bottom:1.5px solid var(--rule);border-radius:0;padding:18px 0;margin:0}
+.chk h3{font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+.chk p{margin:0 0 10px;font-size:15px;color:var(--mute);max-width:44em}
+.links{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 14px}
+.links a{font-size:15.5px;font-weight:600;padding:3px 0}
+.seg{display:inline-grid;grid-template-columns:repeat(3,auto);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;max-width:100%}
+.seg button{font:600 14px/1 inherit;padding:11px 13px;border:0;border-left:1.5px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.seg button:first-child{border-left:0}
+.seg button.on{background:var(--ink);color:#fff}
+.seg button.on.found{background:var(--hi);color:var(--ink)}
+.addf{display:grid;gap:10px;margin-top:14px;padding:14px;background:var(--wash);border-radius:6px;max-width:640px}
+.addf input[type=text],.addf select{background-color:#fff;border:1.5px solid var(--rule);border-radius:6px;padding:11px 12px}
+.addf select{background-position:right 12px center}
+.fitem{font-size:14px;display:flex;justify-content:space-between;gap:10px;word-break:break-all}
+.fitem span{background:var(--hi);padding:2px 5px}
+.fitem button{background:none;border:0;color:var(--mute);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;flex:none}
+.bar{position:sticky;bottom:0;background:var(--black);color:#fff;padding:13px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15px;z-index:5}
+.bar b{background:var(--hi);color:var(--ink);padding:1px 7px;border-radius:2px}
 .bar a{color:#fff;font-weight:700}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 16px}
-.stat{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px;text-align:center}
-.stat b{display:block;font:700 34px/1 Newsreader,Georgia,serif}
-.stat span{font-size:12.5px;color:var(--mute)}
-.stat.hot b{color:var(--hot)}
-.step{border-top:1.5px solid var(--line);padding:14px 0}
-.step:first-child{border-top:0}
-.step h4{margin:0 0 6px;font-size:16.5px}
-.step p{margin:0 0 10px;font-size:15px}
-pre{white-space:pre-wrap;word-break:break-word;font:14px/1.5 ui-monospace,Menlo,Consolas,monospace;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px;margin:0 0 10px}
-.lock{position:relative;overflow:hidden}
-.lock .blur{filter:blur(5px);user-select:none;pointer-events:none;max-height:170px;overflow:hidden}
-.pay{background:var(--ink);color:#fff;border-radius:18px;padding:22px;margin:0 0 14px}
-.pay h3{font-size:28px;margin-bottom:8px}
-.pay ul{margin:10px 0 16px;padding-left:20px;font-size:15.5px}
-.pay .btn{background:var(--mint);color:var(--ink)}
-.pay .note{color:#B9C4BE}
-.tr{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--mute);flex-wrap:wrap}
-details{border-top:1.5px solid var(--line);padding:14px 0}
-details:last-of-type{border-bottom:1.5px solid var(--line)}
-summary{cursor:pointer;font-weight:700;font-size:17px}
-details p{margin:8px 0 0;color:#33403A;font-size:15.5px}
-footer{padding:34px 0 90px;font-size:13px;color:var(--mute)}
-footer p{margin:0 0 8px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin:0 0 22px}
+.stat b{display:block;font-size:46px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.stat span{font-size:13.5px;color:var(--mute)}
+.stat.hot b{display:inline-block;background:var(--hi);padding:0 8px}
+.stat.hot span{display:block}
+.step{border-top:1.5px solid var(--rule);padding:16px 0 4px}
+.step:first-child{border-top:0;padding-top:6px}
+.step h4{font-size:16.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:5px}
+.step p{margin:0 0 10px;font-size:15px;max-width:46em}
+pre{white-space:pre-wrap;word-break:break-word;font:400 15px/1.5 inherit;background:var(--wash);border-radius:6px;padding:16px;margin:0 0 10px}
+.tr{font-size:14px;color:var(--mute);margin:10px 0 8px}
+.lock .blur{max-height:190px;overflow:hidden;pointer-events:none;user-select:none}
+.lock .blur h4,.lock .blur p,.lock .blur pre,.lock .blur a,.lock .blur span{color:transparent!important;background:repeating-linear-gradient(var(--black) 0 1.02em,transparent 1.02em 1.5em)!important;text-decoration:none;border-radius:0}
+.lock .blur .btn,.lock .blur .check input{visibility:hidden}
+.pay{background:var(--black);color:#fff;border-radius:4px;padding:26px 22px;margin:0 0 18px}
+.pay h3{font-size:28px;font-weight:900;margin-bottom:10px}
+.pay ul{margin:0 0 18px;padding-left:20px;font-size:15.5px;line-height:1.5}
+.pay .btn{background:var(--hi);color:var(--ink)}
+.pay .btn:hover{background:#FFF08A}
+.pay .btn[aria-disabled=true]{background:#3a3a3a;color:#bbb;cursor:default}
+.pay .note{color:#B4B9C4;margin-top:12px}
+details{border-top:1.5px solid var(--rule);padding:15px 0;max-width:760px}
+details:last-of-type{border-bottom:1.5px solid var(--rule)}
+summary{cursor:pointer;font-weight:700;font-size:17.5px}
+details p{margin:8px 0 0;color:#2B3650;font-size:16px}
+footer{padding:40px 0 96px;font-size:13.5px;color:var(--mute)}
+footer p{margin:0 0 6px}
 .hide{display:none!important}
-@media(min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}.row{grid-template-columns:1fr 1fr}.hero{padding-top:54px}}
-@media print{nav,.bar,.pay,.links,.seg,.btn,#intake,#how,#faq,footer,.hero{display:none!important}body{background:#fff}.card{break-inside:avoid;border-color:#999}}
+@media(min-width:820px){.hero{grid-template-columns:1.2fr .9fr;gap:56px;padding:44px 0 64px;align-items:center}.how{grid-template-columns:repeat(3,1fr);gap:28px}.row{grid-template-columns:1fr 1fr;gap:28px}form.slip{padding:34px}}
+@media(prefers-reduced-motion:reduce){.found mark:after{animation:none;transform:scaleX(1)}html{scroll-behavior:auto}}
+@media print{nav,.bar,.pay,.links,.seg,.btn,#intake,#how,#faq,footer,.hero{display:none!important}.card{break-inside:avoid}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a class="logo" href="./"><i></i>OmniWatch</a><button id="erase" class="hide" type="button">Erase my audit</button></nav>
+<nav><a class="logo" href="./">OmniWatch<span aria-hidden="true">_</span></a><button id="erase" class="hide" type="button">Erase my audit</button></nav>
 
 <header class="hero" id="hero">
-  <p class="eyebrow">For parents and guardians</p>
-  <h1>See what the internet knows about your child. <em>Then take it down.</em></h1>
-  <p class="lede">A guided audit of the places kids' names, photos and accounts actually end up: search engines, people-search sites, school and team pages, old family posts. You run every search from your own browser. We never see a thing.</p>
-  <a class="btn" href="#intake">Start the free audit</a>
-  <ul class="trust">
-    <li>Nothing you type leaves this page. No account, no tracking, no database of kids.</li>
-    <li>About 20 minutes. Free.</li>
-    <li>Found something? The $29 Takedown Kit writes every removal request for you.</li>
-  </ul>
+  <div>
+    <h1>See what the internet knows about your child. Then take it down.</h1>
+    <p class="lede">A guided audit for parents. It walks you through the places kids' names, photos and accounts end up, then writes the removal request for everything you find.</p>
+    <a class="btn" href="#intake">Start the free audit</a>
+    <ul class="trust">
+      <li><b>Private by design.</b> Every search runs in your own browser. Nothing you type is sent to us.</li>
+      <li><b>Free to audit.</b> $29 once if you want the removal requests written for you.</li>
+    </ul>
+  </div>
+  <div class="found" aria-label="Example of what an audit turns up, with each mention then blacked out">
+    <p class="q">"Maya Okafor" Tacoma</p>
+    <ol>
+      <li><span class="src">Example school site</span><span class="ttl">4th grade honor roll, spring (PDF)</span>Room 12: <mark style="--d:1.2s">Maya Okafor</mark>, perfect attendance</li>
+      <li><span class="src">Example swim club</span><span class="ttl">2026 roster and lane assignments</span><mark style="--d:1.8s">Maya Okafor</mark>, age 9, Tuesdays 4:30</li>
+      <li><span class="src">A relative's public post</span><span class="ttl">Happy 9th birthday to our girl!</span>March 14, with <mark style="--d:2.4s">Maya</mark> at Lincoln Elementary</li>
+      <li><span class="src">Example people-search site</span><span class="ttl">Dana Okafor, Tacoma WA</span>Household members: <mark style="--d:3s">Maya (minor)</mark></li>
+    </ol>
+    <p class="cap">An invented example. Yours will look different.</p>
+  </div>
 </header>
 
 <section id="how">
   <h2>How it works</h2>
-  <div class="grid3">
-    <div class="card"><h3>1. Audit</h3><p>Up to 28 checks, each with one-tap searches built from your child's name, school, teams and handles.</p></div>
-    <div class="card"><h3>2. Log what you find</h3><p>Paste the link, pick what it is. Your list stays on this device until you erase it.</p></div>
-    <div class="card"><h3>3. Take it down</h3><p>Each finding gets the right request, pre-written: who to send it to, what to cite, when to follow up.</p></div>
-  </div>
-  <div class="card"><b>What this can't do.</b> It can't see private accounts or group chats, and nobody can force every site to delete. It covers what a stranger could find, which is the part that matters most.</div>
+  <ol class="how">
+    <li><h3>Audit</h3><p>Up to 28 checks, each with one-tap searches built from your child's name, school, teams and handles.</p></li>
+    <li><h3>Log what you find</h3><p>Paste the link and pick what it is. Your list stays on this device until you erase it.</p></li>
+    <li><h3>Take it down</h3><p>Each finding gets the right request, already written: who to send it to, what to cite, when to follow up.</p></li>
+  </ol>
+  <p class="limits">It can't see private accounts or group chats, and nobody can force every site to delete. It covers what a stranger could find, which is the part that matters most.</p>
 </section>
 
 <section id="intake">
   <h2>Start the audit</h2>
   <p class="sub">These details only build your search links. They are stored in this browser and nowhere else.</p>
-  <form class="card" id="f">
+  <form class="slip" id="f">
     <div class="row">
       <label>Child's first name<input type="text" name="first" required maxlength="40" autocomplete="off"></label>
       <label>Last name<input type="text" name="last" required maxlength="40" autocomplete="off"></label>
@@ -188,7 +218,7 @@ footer p{margin:0 0 8px}
   <p>Privacy: no cookies, no analytics, no accounts. The audit lives only in your browser.</p>
 </footer>
 </div>
-<div class="bar hide" id="bar"><span><b id="bFound">0</b> found · <span id="bDone">0</span>/<span id="bAll">0</span> checks</span><a href="#report">See report</a></div>
+<div class="bar hide" id="bar"><span><b id="bFound">0</b> found, <span id="bDone">0</span> of <span id="bAll">0</span> checks done</span><a href="#report">See report</a></div>
 
 <script>
 (function(){
@@ -327,7 +357,7 @@ function renderChecks(){
     card.appendChild(seg);
     if(S.st[k.id]==="found"){
       var a=el("div","addf");
-      S.f.filter(function(f){return f.k===k.id}).forEach(function(f){var it=el("div","fitem");it.appendChild(el("span",null,(f.url||"(no link)")+" · "+TYPES[f.type]));var rm=el("button",null,"Remove");rm.type="button";rm.onclick=function(){S.f=S.f.filter(function(z){return z!==f});save();renderChecks();renderReport()};it.appendChild(rm);a.appendChild(it)});
+      S.f.filter(function(f){return f.k===k.id}).forEach(function(f){var it=el("div","fitem");it.appendChild(el("span",null,(f.url||"(no link)")+" ("+TYPES[f.type].toLowerCase()+")"));var rm=el("button",null,"Remove");rm.type="button";rm.onclick=function(){S.f=S.f.filter(function(z){return z!==f});save();renderChecks();renderReport()};it.appendChild(rm);a.appendChild(it)});
       var u=el("input");u.type="text";u.placeholder="Paste the link to what you found";u.setAttribute("aria-label","Link to what you found");
       var sel=el("select");Object.keys(TYPES).forEach(function(t){var o=el("option",null,TYPES[t]);o.value=t;if(t===k.type)o.selected=true;sel.appendChild(o)});sel.setAttribute("aria-label","What it is");
       var ad=el("button","btn sm","Add to my list");ad.type="button";ad.onclick=function(){var v=u.value.trim();if(!v)return;if(!/^https?:\/\//i.test(v))v="https://"+v;S.f.push({id:Date.now()+"-"+S.f.length,k:k.id,url:v.slice(0,500),type:sel.value});save();renderChecks();renderReport()};
@@ -351,7 +381,7 @@ function stepNode(s,key){
 
 function renderReport(){
   var c=S.c, kit=$("kit");kit.textContent="";
-  var items=S.f.map(function(f){return {f:f,label:(host(f.url)||"Finding")+" · "+TYPES[f.type]}}).concat(standard(c).map(function(s,i){return {f:{id:"std"+i,url:s.url,type:s.type},label:s.label}}));
+  var items=S.f.map(function(f){return {f:f,label:(host(f.url)||"Finding")+": "+TYPES[f.type].toLowerCase()}}).concat(standard(c).map(function(s,i){return {f:{id:"std"+i,url:s.url,type:s.type},label:s.label}}));
   if(!S.un){
     var pay=el("div","pay");pay.appendChild(el("h3",null,S.f.length?("You found "+S.f.length+(S.f.length===1?" thing":" things")+". Here's how to get "+(S.f.length===1?"it":"them")+" down."):"The Takedown Kit"));
     var ul=el("ul");["A ready-to-send request for every finding, with your details filled in","Where to send each one and which rule it relies on","People-search opt-outs, school directory opt-out, Google removal routes","Follow-up dates, so nothing gets ignored"].forEach(function(t){ul.appendChild(el("li",null,t))});pay.appendChild(ul);
