@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OmniWatch — see what the internet knows about your child, then take it down</title>
+<meta name="description" content="A guided audit of where kids' names, photos and accounts end up online, plus ready-to-send removal requests. Every search runs in your own browser. Nothing about your child reaches a server.">
+<meta property="og:title" content="See what the internet knows about your child. Then take it down.">
+<meta property="og:description" content="Free guided audit. Nothing you type leaves your browser. $29 Takedown Kit writes every removal request for you.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://omniwatch.tech/og.png">
+<meta property="og:url" content="https://omniwatch.tech/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314201B'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23F6F3EC' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2337C28B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F3EC;--card:#FFFDF8;--ink:#14201B;--mute:#5C6862;--line:#DDD6C6;--go:#1E6B4F;--go2:#175640;--mint:#37C28B;--hot:#C4472D;--warn:#FBEDE7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif;font-weight:700;line-height:1.06;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;text-decoration:none}
+.logo i{width:22px;height:22px;border-radius:50%;border:4px solid var(--ink);position:relative;display:block}
+.logo i:after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--mint)}
+nav button{background:none;border:0;color:var(--mute);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
+.hero{padding:30px 0 10px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--go);margin:0 0 14px}
+h1{font-size:clamp(40px,9.5vw,68px)}
+h1 em{font-style:italic;color:var(--go)}
+.lede{font-size:19px;max-width:36em;margin:18px 0 22px}
+.btn{display:inline-block;background:var(--go);color:#fff;font:700 17px/1 inherit;text-decoration:none;border:0;border-radius:12px;padding:17px 24px;cursor:pointer}
+.btn:hover{background:var(--go2)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.sm{font-size:14.5px;padding:11px 14px;border-radius:10px}
+.btn.wide{width:100%;text-align:center}
+.btn[disabled]{background:#B9B3A4;cursor:not-allowed}
+.trust{display:grid;gap:8px;margin:22px 0 0;padding:0;list-style:none;font-size:15px}
+.trust li{padding-left:26px;position:relative}
+.trust li:before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border-radius:50%;background:var(--mint)}
+section{padding:40px 0 4px}
+h2{font-size:clamp(30px,6.5vw,42px);margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 20px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:20px;margin:0 0 14px}
+.grid3{display:grid;gap:12px}
+.grid3 h3{font-size:22px;margin-bottom:6px}
+.grid3 p{margin:0;font-size:15.5px;color:var(--mute)}
+form{display:grid;gap:16px}
+.row{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:650;font-size:14.5px}
+label small{font-weight:400;color:var(--mute)}
+input[type=text],select,textarea{width:100%;font:400 16.5px/1.35 inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:13px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--go);outline-offset:1px}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:15px}
+.check input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--go)}
+.note{font-size:13.5px;color:var(--mute);margin:0}
+.cat{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:26px 0 10px}
+.chk h3{font-size:21px;margin-bottom:4px}
+.chk p{margin:0 0 12px;font-size:15px;color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.links a{font-size:14px;font-weight:650;text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:8px 12px;background:#fff}
+.links a:hover{background:var(--ink);color:#fff}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.seg button{font:650 14px/1 inherit;padding:11px 4px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.seg button.on.clear{background:var(--go);border-color:var(--go);color:#fff}
+.seg button.on.found{background:var(--hot);border-color:var(--hot);color:#fff}
+.seg button.on.skip{background:var(--mute);border-color:var(--mute);color:#fff}
+.addf{display:grid;gap:8px;margin-top:12px;padding:12px;border-radius:12px;background:var(--warn)}
+.fitem{font-size:14px;background:#fff;border-radius:10px;padding:9px 11px;display:flex;justify-content:space-between;gap:10px;word-break:break-all}
+.fitem button{background:none;border:0;color:var(--hot);font:inherit;font-size:13px;cursor:pointer;flex:none}
+.bar{position:sticky;bottom:0;background:var(--ink);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14.5px;z-index:5}
+.bar b{color:var(--mint)}
+.bar a{color:#fff;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 16px}
+.stat{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.stat b{display:block;font:700 34px/1 Newsreader,Georgia,serif}
+.stat span{font-size:12.5px;color:var(--mute)}
+.stat.hot b{color:var(--hot)}
+.step{border-top:1.5px solid var(--line);padding:14px 0}
+.step:first-child{border-top:0}
+.step h4{margin:0 0 6px;font-size:16.5px}
+.step p{margin:0 0 10px;font-size:15px}
+pre{white-space:pre-wrap;word-break:break-word;font:14px/1.5 ui-monospace,Menlo,Consolas,monospace;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px;margin:0 0 10px}
+.lock{position:relative;overflow:hidden}
+.lock .blur{filter:blur(5px);user-select:none;pointer-events:none;max-height:170px;overflow:hidden}
+.pay{background:var(--ink);color:#fff;border-radius:18px;padding:22px;margin:0 0 14px}
+.pay h3{font-size:28px;margin-bottom:8px}
+.pay ul{margin:10px 0 16px;padding-left:20px;font-size:15.5px}
+.pay .btn{background:var(--mint);color:var(--ink)}
+.pay .note{color:#B9C4BE}
+.tr{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--mute);flex-wrap:wrap}
+details{border-top:1.5px solid var(--line);padding:14px 0}
+details:last-of-type{border-bottom:1.5px solid var(--line)}
+summary{cursor:pointer;font-weight:700;font-size:17px}
+details p{margin:8px 0 0;color:#33403A;font-size:15.5px}
+footer{padding:34px 0 90px;font-size:13px;color:var(--mute)}
+footer p{margin:0 0 8px}
+.hide{display:none!important}
+@media(min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}.row{grid-template-columns:1fr 1fr}.hero{padding-top:54px}}
+@media print{nav,.bar,.pay,.links,.seg,.btn,#intake,#how,#faq,footer,.hero{display:none!important}body{background:#fff}.card{break-inside:avoid;border-color:#999}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="./"><i></i>OmniWatch</a><button id="erase" class="hide" type="button">Erase my audit</button></nav>
+
+<header class="hero" id="hero">
+  <p class="eyebrow">For parents and guardians</p>
+  <h1>See what the internet knows about your child. <em>Then take it down.</em></h1>
+  <p class="lede">A guided audit of the places kids' names, photos and accounts actually end up: search engines, people-search sites, school and team pages, old family posts. You run every search from your own browser. We never see a thing.</p>
+  <a class="btn" href="#intake">Start the free audit</a>
+  <ul class="trust">
+    <li>Nothing you type leaves this page. No account, no tracking, no database of kids.</li>
+    <li>About 20 minutes. Free.</li>
+    <li>Found something? The $29 Takedown Kit writes every removal request for you.</li>
+  </ul>
+</header>
+
+<section id="how">
+  <h2>How it works</h2>
+  <div class="grid3">
+    <div class="card"><h3>1. Audit</h3><p>Up to 28 checks, each with one-tap searches built from your child's name, school, teams and handles.</p></div>
+    <div class="card"><h3>2. Log what you find</h3><p>Paste the link, pick what it is. Your list stays on this device until you erase it.</p></div>
+    <div class="card"><h3>3. Take it down</h3><p>Each finding gets the right request, pre-written: who to send it to, what to cite, when to follow up.</p></div>
+  </div>
+  <div class="card"><b>What this can't do.</b> It can't see private accounts or group chats, and nobody can force every site to delete. It covers what a stranger could find, which is the part that matters most.</div>
+</section>
+
+<section id="intake">
+  <h2>Start the audit</h2>
+  <p class="sub">These details only build your search links. They are stored in this browser and nowhere else.</p>
+  <form class="card" id="f">
+    <div class="row">
+      <label>Child's first name<input type="text" name="first" required maxlength="40" autocomplete="off"></label>
+      <label>Last name<input type="text" name="last" required maxlength="40" autocomplete="off"></label>
+    </div>
+    <div class="row">
+      <label>Nickname or other spelling <small>optional</small><input type="text" name="nick" maxlength="40" autocomplete="off"></label>
+      <label>Usernames they use <small>optional, comma separated</small><input type="text" name="users" maxlength="120" autocomplete="off" autocapitalize="off"></label>
+    </div>
+    <div class="row">
+      <label>Age<select name="age"><option value="u13">Under 13</option><option value="teen">13 to 17</option></select></label>
+      <label>Where you live<select name="region"><option value="US">United States (not California)</option><option value="CA">California</option><option value="EU">European Union</option><option value="UK">United Kingdom</option><option value="XX">Somewhere else</option></select></label>
+    </div>
+    <div class="row">
+      <label>City or town<input type="text" name="city" required maxlength="60" autocomplete="off"></label>
+      <label>School <small>optional</small><input type="text" name="school" maxlength="80" autocomplete="off"></label>
+    </div>
+    <div class="row">
+      <label>Team, club or activity <small>optional</small><input type="text" name="team" maxlength="80" autocomplete="off"></label>
+      <label>Your full name <small>for household searches and letters</small><input type="text" name="parent" required maxlength="80" autocomplete="off"></label>
+    </div>
+    <label class="check"><input type="checkbox" name="guardian" required><span>I am this child's parent or legal guardian. Removal requests only work when they come from one.</span></label>
+    <button class="btn wide" type="submit">Build my audit</button>
+    <p class="note">No sign-up. Nothing is sent anywhere when you press this.</p>
+  </form>
+</section>
+
+<section id="audit" class="hide">
+  <h2>The audit</h2>
+  <p class="sub" id="auditsub"></p>
+  <div id="checks"></div>
+</section>
+
+<section id="report" class="hide">
+  <h2>Your exposure report</h2>
+  <div class="stats"><div class="stat"><b id="sDone">0</b><span>checks done</span></div><div class="stat hot"><b id="sFound">0</b><span>things found</span></div><div class="stat"><b id="sLeft">0</b><span>checks left</span></div></div>
+  <div id="kit"></div>
+</section>
+
+<section id="faq">
+  <h2>Fair questions</h2>
+  <details><summary>Why don't you just scan for me?</summary><p>A tool that takes a child's name and returns a profile works just as well for a stranger as for a parent. So OmniWatch never collects or compiles anything. It builds the searches, and you run them and decide what matters.</p></details>
+  <details><summary>Where does my child's information go?</summary><p>Nowhere. This page has no accounts, no analytics and no server that receives what you type. Your audit is saved in this browser's storage so you can come back to it, and "Erase my audit" wipes it.</p></details>
+  <details><summary>What's in the Takedown Kit?</summary><p>For each thing you found: the request to send, already written with your details, the place to send it, the rule it relies on where one applies, and a follow-up date. Plus the standard set every family can use: people-search opt-outs, a school directory opt-out letter, Google's removal routes, and a kind message for relatives.</p></details>
+  <details><summary>Will everything get removed?</summary><p>No one can promise that. Sites covered by privacy law have to respond, most schools, teams and relatives say yes when asked clearly, and Google removes images of minors on request with some exceptions. News coverage and public records are the hardest.</p></details>
+  <details><summary>Is this legal advice?</summary><p>No. OmniWatch is an information tool. The letters cite rules that commonly apply, but your situation may differ. For anything serious, such as harassment, threats or a custody dispute, talk to a lawyer or the police.</p></details>
+  <details><summary>Refunds?</summary><p>If the kit doesn't help, reply to your receipt within 14 days for a full refund.</p></details>
+</section>
+
+<footer>
+  <p>© 2026 OmniWatch. An information tool, not a law firm. Payments by Lemon Squeezy.</p>
+  <p>Privacy: no cookies, no analytics, no accounts. The audit lives only in your browser.</p>
+</footer>
+</div>
+<div class="bar hide" id="bar"><span><b id="bFound">0</b> found · <span id="bDone">0</span>/<span id="bAll">0</span> checks</span><a href="#report">See report</a></div>
+
+<script>
+(function(){
+"use strict";
+var HASH="e251c8d65e75012cd78d60aabbb077601e1954f163b4ced943c762c44b28ea46";
+var CHECKOUT="";
+var PRICE=29, KEY="ow_state_v1";
+var $=function(id){return document.getElementById(id)};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+var mem={};
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||null}catch(e){return mem.s||null}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){mem.s=S}}
+var S=load()||{c:null,st:{},f:[],sent:{},un:false};
+
+var enc=encodeURIComponent;
+function g(q){return "https://www.google.com/search?q="+enc(q)}
+function gi(q){return "https://www.google.com/search?tbm=isch&q="+enc(q)}
+function gn(q){return "https://www.google.com/search?tbm=nws&q="+enc(q)}
+function b(q){return "https://www.bing.com/search?q="+enc(q)}
+function d(q){return "https://duckduckgo.com/?q="+enc(q)}
+function Q(s){return '"'+s+'"'}
+
+function checks(c){
+  var n=Q(c.first+" "+c.last), city=c.city?Q(c.city):"", L=[];
+  function add(cat,id,title,why,links,type){L.push({cat:cat,id:id,title:title,why:why,links:links.filter(Boolean),type:type||"other"})}
+  var three=function(q){return [{l:"Google",u:g(q)},{l:"Bing",u:b(q)},{l:"DuckDuckGo",u:d(q)}]};
+  add("Search engines","s1","Name and town","The first thing a stranger would type.",three(n+" "+city));
+  if(c.school)add("Search engines","s2","Name and school","School pages rank high and stay up for years.",three(n+" "+Q(c.school)),"school");
+  if(c.team)add("Search engines","s3","Name and team or club","Rosters, schedules and results are usually public.",three(n+" "+Q(c.team)),"school");
+  add("Search engines","s4","Image results","Photos tied to the name, often from pages you've never seen.",[{l:"Google Images",u:gi(n+" "+city)},{l:"Bing Images",u:"https://www.bing.com/images/search?q="+enc(n+" "+c.city)}],"photo");
+  if(c.nick)add("Search engines","s5","Nickname or other spelling","Coaches, relatives and yearbooks don't always use the legal name.",three(Q(c.nick+" "+c.last)+" "+city));
+  add("Search engines","s6","Your name next to theirs","Announcements, obituaries and fundraisers often name parent and child together.",three(n+" "+Q(c.parent)),"news");
+  add("Search engines","s7","PDFs and documents","Programs, honor rolls and rosters get uploaded as files and forgotten.",[{l:"Google PDFs",u:g(n+" "+city+" filetype:pdf")},{l:"Google docs and sheets",u:g(n+" "+city+" (filetype:doc OR filetype:docx OR filetype:xls OR filetype:xlsx)")}],"school");
+
+  add("People-search sites","p1","Your household listing","These sites list households and relatives. Search your own name and look for your child under relatives or residents.",[{l:"Spokeo",u:"https://www.spokeo.com/"},{l:"Whitepages",u:"https://www.whitepages.com/"},{l:"BeenVerified",u:"https://www.beenverified.com/"},{l:"TruePeopleSearch",u:"https://www.truepeoplesearch.com/"},{l:"FastPeopleSearch",u:"https://www.fastpeoplesearch.com/"},{l:"Radaris",u:"https://radaris.com/"}],"broker");
+  add("People-search sites","p2","Your address and phone on Google","Your child's safety is tied to your home address. Google's own tool shows where your contact details appear.",[{l:"Google: Results about you",u:"https://myactivity.google.com/results-about-you"}],"broker");
+
+  var us=(c.users||[]);
+  us.forEach(function(u,i){
+    add("Social and gaming","u"+i,"Handle: "+u,"See which platforms have a public profile under this name.",[{l:"Instagram",u:"https://www.instagram.com/"+enc(u)+"/"},{l:"TikTok",u:"https://www.tiktok.com/@"+enc(u)},{l:"YouTube",u:"https://www.youtube.com/@"+enc(u)},{l:"Snapchat",u:"https://www.snapchat.com/add/"+enc(u)},{l:"Roblox",u:"https://www.roblox.com/search/users?keyword="+enc(u)},{l:"Twitch",u:"https://www.twitch.tv/"+enc(u)},{l:"Pinterest",u:"https://www.pinterest.com/"+enc(u)+"/"},{l:"Steam",u:"https://steamcommunity.com/id/"+enc(u)},{l:"Everywhere else",u:g(Q(u))}],"profile");
+  });
+  add("Social and gaming","o1","Name on social platforms","Posts by other people that use your child's full name.",[{l:"Instagram, TikTok, Facebook",u:g(n+" (site:instagram.com OR site:tiktok.com OR site:facebook.com)")},{l:"YouTube",u:g(n+" site:youtube.com")},{l:"X and Reddit",u:g(n+" (site:x.com OR site:reddit.com)")}],"photo");
+  add("Social and gaming","o2","Accounts you didn't know about","Ask them, then check the email inboxes they use for sign-up messages. Log any account you want closed.",[],"profile");
+
+  add("School and activities","a1","School newsletters, honor rolls, yearbooks","",[{l:"Search",u:g(n+" "+(c.school?Q(c.school):city)+' (newsletter OR "honor roll" OR yearbook OR "student of the month")')}],"school");
+  add("School and activities","a2","Rosters and stats sites","Youth sports sites publish names, ages, numbers and photos by default.",[{l:"Search",u:g(n+" "+city+" (roster OR stats OR MaxPreps OR GameChanger OR Hudl OR TeamSnap)")}],"school");
+  add("School and activities","a3","Competitions, recitals and results","",[{l:"Search",u:g(n+" "+city+' (results OR winners OR "spelling bee" OR "science fair" OR recital OR meet OR tournament)')}],"school");
+  add("School and activities","a4","Camps, races and programs","Race results list name, age and town. Camps post photo galleries.",[{l:"Search",u:g(n+" "+city+' (camp OR "5K" OR "fun run" OR "summer program" OR gallery)')}],"photo");
+  add("School and activities","a5","Local news","",[{l:"Google News",u:gn(n+" "+c.city)},{l:"Web",u:g(n+" "+city+" news")}],"news");
+
+  add("Family posts","f1","What your own profiles show strangers","Open your Facebook and Instagram in a private window while logged out. Anything you can see, anyone can.",[{l:"Facebook",u:"https://www.facebook.com/"},{l:"Instagram",u:"https://www.instagram.com/"}],"family");
+  add("Family posts","f2","Relatives' public posts","Grandparents and aunts post with full names and birthdays.",[{l:"Search",u:g(n+" (grandson OR granddaughter OR nephew OR niece OR birthday OR \"so proud\")")}],"family");
+  add("Family posts","f3","Birth announcements and registries","Hospital pages, newspaper announcements and public gift registries.",[{l:"Search",u:g(n+" "+city+' ("birth announcement" OR "baby registry" OR registry OR "welcomed")')}],"news");
+  add("Family posts","f4","Obituaries that name grandchildren","Obituaries list surviving family by full name and are indexed forever.",[{l:"Search",u:g(n+' (obituary OR "survived by")')}],"news");
+  add("Family posts","f5","Fundraisers and meal trains","",[{l:"Search",u:g(n+" (gofundme OR fundraiser OR \"meal train\" OR donate)")}],"news");
+
+  add("Photos","i1","Where your photos have travelled","Pick two or three photos of your child that you have posted publicly and run them through a reverse image search yourself.",[{l:"Google Lens",u:"https://lens.google.com/"},{l:"TinEye",u:"https://tineye.com/"}],"photo");
+  add("Photos","i2","Photographers and photo vendors","Studios and school-photo vendors sometimes leave galleries public.",[{l:"Search",u:g(n+" "+city+" (photography OR portraits OR gallery OR proofs)")}],"photo");
+
+  add("Accounts and breaches","b1","Breached email addresses","Enter each email your child uses. If it's in a breach, change that password and close accounts they don't need.",[{l:"Have I Been Pwned",u:"https://haveibeenpwned.com/"}],"profile");
+  add("Accounts and breaches","b2","Apps and games holding their data","List the apps and games they use. Log each one you want to send a data deletion request to.",[],"profile");
+  add("Accounts and breaches","b3","School-issued accounts","Ask the school which learning apps your child has accounts with, and what happens to the data at year end.",[],"school");
+  return L;
+}
+
+var TYPES={photo:"Photo or video",school:"School, team or activity page",profile:"Account, profile or app",broker:"People-search or contact listing",family:"Family member's post",news:"News, record or announcement",other:"Something else"};
+var today=function(){return new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"})};
+function plus(days){var t=new Date();t.setDate(t.getDate()+days);return t.toLocaleDateString("en-US",{month:"short",day:"numeric"})}
+function host(u){try{return new URL(u).hostname.replace(/^www\./,"")}catch(e){return ""}}
+function isSocial(h){return /(instagram|facebook|tiktok|youtube|snapchat|x\.com|twitter|reddit|pinterest|twitch|roblox|discord)/.test(h)}
+
+function legal(c){
+  if(c.region==="EU"||c.region==="UK"){var G=c.region==="UK"?"the UK GDPR":"the GDPR";return "This is a request for erasure under Article 17 of "+G+". My child's personal data was published without my consent, and the law gives children's data specific protection. Please respond within one month, as Article 12 requires.";}
+  if(c.region==="CA")return "If the California Consumer Privacy Act applies to your organization, this is also a request to delete my child's personal information under Cal. Civ. Code § 1798.105, made by me as the parent. Please respond within 45 days.";
+  if(c.region==="US")return "Several U.S. states now give parents the right to have a child's personal data deleted. Whichever rules apply to you, I am asking as this child's parent.";
+  return "Whichever privacy rules apply to you, I am asking as this child's parent.";
+}
+function ageLine(c){return c.age==="u13"?"who is under 13":"who is a minor under 18"}
+function wait(c){return c.region==="EU"||c.region==="UK"?30:(c.region==="CA"?45:14)}
+function sign(c){return "\n\nThank you,\n"+c.parent+"\n"+today()}
+
+function steps(f,c){
+  var name=c.first+" "+c.last, h=host(f.url)||"the site", out=[], what=TYPES[f.type].toLowerCase();
+  var owner={t:"Ask "+h+" to remove it",p:"Send this to the site's contact, privacy or webmaster address. Look for a Contact or Privacy link in the footer.",x:"Subject: Request to remove my child's information from "+h+"\n\nHello,\n\nI am the parent and legal guardian of "+name+", "+ageLine(c)+". This page on your site shows my child's information ("+what+"):\n\n"+f.url+"\n\nI did not agree to this being published and I am asking you to remove it, along with any other page or file that identifies my child, within 10 business days.\n\n"+legal(c)+"\n\nPlease reply to confirm once it is removed. If you need to verify that I am this child's parent, tell me what you need."+sign(c),w:wait(c)};
+  var google={t:"Remove it from Google",p:"Google removes images of anyone under 18 from search results when a parent asks, with exceptions for newsworthy images. Submit the image address, not the page address. After a page is deleted at the source, use the outdated content tool so the result disappears faster.",k:[{l:"Google: remove images of minors",u:"https://support.google.com/websearch/answer/10949130"},{l:"Google: remove outdated content",u:"https://search.google.com/search-console/remove-outdated-content"},{l:"Bing: report a concern",u:"https://www.microsoft.com/en-us/concern/bing"}],w:14};
+  var platform={t:"Report it on the platform",p:(c.age==="u13"?"Every major platform bans accounts for children under 13 and has a form to report one. ":"")+"Open the post or profile, choose Report, and pick the privacy option that mentions a child or minor. For an account your child made, the platform's help center has a delete-account route a parent can use. Save a screenshot before you report.",k:[{l:"Instagram help",u:"https://help.instagram.com/"},{l:"Facebook help",u:"https://www.facebook.com/help/"},{l:"TikTok support",u:"https://support.tiktok.com/"},{l:"YouTube help",u:"https://support.google.com/youtube/"},{l:"Snapchat support",u:"https://help.snapchat.com/"},{l:"Roblox support",u:"https://www.roblox.com/support"}],w:7};
+  if(f.type==="broker"){
+    out.push({t:"Opt out of people-search sites",p:"Each site has its own form. Find your listing first, copy its address, then submit it. Repeat every few months, because listings come back.",k:[{l:"Spokeo opt-out",u:"https://www.spokeo.com/optout"},{l:"Whitepages",u:"https://www.whitepages.com/suppression-requests"},{l:"BeenVerified",u:"https://www.beenverified.com/app/optout/search"},{l:"TruePeopleSearch",u:"https://www.truepeoplesearch.com/removal"},{l:"FastPeopleSearch",u:"https://www.fastpeoplesearch.com/removal"},{l:"Intelius and PeopleConnect",u:"https://suppression.peopleconnect.us/login"},{l:"Radaris",u:"https://radaris.com/control/privacy"},{l:"PeopleFinders",u:"https://www.peoplefinders.com/opt-out"}],w:14});
+    if(c.region==="CA")out.push({t:"Use California's one-stop delete request",p:"California residents can send a single deletion request to every registered data broker through the state's DROP platform. Check the site for how to file for a minor.",k:[{l:"privacy.ca.gov/drop",u:"https://privacy.ca.gov/drop/"}],w:45});
+    out.push({t:"Remove your address and phone from Google",p:"Turn on alerts so you hear when your contact details show up again.",k:[{l:"Results about you",u:"https://myactivity.google.com/results-about-you"}],w:14});
+    return out;
+  }
+  if(f.type==="family"){
+    out.push({t:"Ask the family member",p:"Most relatives say yes when the ask is specific and kind. Send this as a text or message.",x:"Hi! I've been doing a privacy check on what's public about "+c.first+" online, and one of your posts came up:\n\n"+f.url+"\n\nWould you mind taking it down, or changing it to friends-only and removing "+c.first+"'s full name? I love that you share these. I just want to keep the public trail small while "+c.first+" is young. Thank you!",w:7});
+    out.push(google);return out;
+  }
+  if(f.type==="school"){
+    out.push({t:"Ask the school or organizer to remove it",p:"Send to the principal, athletic director, coach or program director. For U.S. schools, the directory opt-out stops future publication too.",x:"Subject: Please remove my child's information and opt us out of directory disclosure\n\nHello,\n\nI am the parent of "+name+". This page publishes my child's information:\n\n"+f.url+"\n\nPlease remove it, and do not publish my child's name or photo on websites, social media, newsletters, rosters or programs posted online from now on."+(c.region==="US"||c.region==="CA"?"\n\nFor school records, this is also my written notice under FERPA (34 C.F.R. § 99.37) that I am opting my child out of the disclosure of directory information.":"")+"\n\n"+legal(c)+"\n\nPlease confirm by reply."+sign(c),w:wait(c)});
+    out.push(google);return out;
+  }
+  if(f.type==="profile"){
+    out.push(platform);
+    out.push({t:"Send a data deletion request to the company",p:"Send to the privacy address in the app's privacy policy.",x:"Subject: Parent request to delete my child's personal information\n\nHello,\n\nI am the parent and legal guardian of "+name+", "+ageLine(c)+". My child has, or had, an account with your service:\n\n"+f.url+"\n\n"+(c.age==="u13"&&(c.region==="US"||c.region==="CA")?"Under the Children's Online Privacy Protection Rule (16 C.F.R. § 312.6), I am asking you to (1) tell me what personal information you have collected from my child, (2) stop collecting and using it, and (3) delete it.":"I am asking you to close this account and delete the personal information you hold about my child.")+"\n\n"+legal(c)+"\n\nPlease confirm by reply when this is done."+sign(c),w:wait(c)});
+    return out;
+  }
+  out.push(owner);
+  if(isSocial(h))out.push(platform);
+  out.push(google);
+  if(f.type==="news")out[0].p+=" News sites and public records can refuse. Asking for the name to be shortened to an initial, or for the page to be hidden from search engines, works more often than asking for deletion.";
+  return out;
+}
+
+function standard(c){
+  return [
+    {url:"",type:"broker",label:"Every family: people-search sites and contact details"},
+    {url:"[paste the page address here, or delete this line]",type:"school",label:"Every family: school directory opt-out"}
+  ];
+}
+
+function sha(s){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(function(buf){return Array.prototype.map.call(new Uint8Array(buf),function(x){return ("0"+x.toString(16)).slice(-2)}).join("")})}
+function tryUnlock(){
+  var p=new URLSearchParams(location.search), code=p.get("unlock");
+  if(!code||!window.crypto||!crypto.subtle)return Promise.resolve();
+  return sha(code.trim()).then(function(h){if(h===HASH){S.un=true;save()}history.replaceState(null,"",location.pathname+location.hash)}).catch(function(){});
+}
+
+function renderChecks(){
+  var c=S.c, L=checks(c), box=$("checks"), cat="";box.textContent="";
+  $("auditsub").textContent="Built for "+c.first+" "+c.last+". Each button opens a search in a new tab. Come back and mark what you saw.";
+  L.forEach(function(k){
+    if(k.cat!==cat){cat=k.cat;box.appendChild(el("div","cat",cat))}
+    var card=el("div","card chk");card.appendChild(el("h3",null,k.title));if(k.why)card.appendChild(el("p",null,k.why));
+    if(k.links.length){var lk=el("div","links");k.links.forEach(function(x){var a=el("a",null,x.l);a.href=x.u;a.target="_blank";a.rel="noopener noreferrer";lk.appendChild(a)});card.appendChild(lk)}
+    var seg=el("div","seg");[["clear","Nothing there"],["found","Found something"],["skip","Skip"]].forEach(function(o){
+      var bt=el("button",o[0]+(S.st[k.id]===o[0]?" on":""),o[1]);bt.type="button";bt.onclick=function(){S.st[k.id]=o[0];save();renderChecks();renderReport()};seg.appendChild(bt)});
+    card.appendChild(seg);
+    if(S.st[k.id]==="found"){
+      var a=el("div","addf");
+      S.f.filter(function(f){return f.k===k.id}).forEach(function(f){var it=el("div","fitem");it.appendChild(el("span",null,(f.url||"(no link)")+" · "+TYPES[f.type]));var rm=el("button",null,"Remove");rm.type="button";rm.onclick=function(){S.f=S.f.filter(function(z){return z!==f});save();renderChecks();renderReport()};it.appendChild(rm);a.appendChild(it)});
+      var u=el("input");u.type="text";u.placeholder="Paste the link to what you found";u.setAttribute("aria-label","Link to what you found");
+      var sel=el("select");Object.keys(TYPES).forEach(function(t){var o=el("option",null,TYPES[t]);o.value=t;if(t===k.type)o.selected=true;sel.appendChild(o)});sel.setAttribute("aria-label","What it is");
+      var ad=el("button","btn sm","Add to my list");ad.type="button";ad.onclick=function(){var v=u.value.trim();if(!v)return;if(!/^https?:\/\//i.test(v))v="https://"+v;S.f.push({id:Date.now()+"-"+S.f.length,k:k.id,url:v.slice(0,500),type:sel.value});save();renderChecks();renderReport()};
+      a.appendChild(u);a.appendChild(sel);a.appendChild(ad);card.appendChild(a);
+    }
+    box.appendChild(card);
+  });
+  var done=L.filter(function(k){return S.st[k.id]}).length;
+  $("sDone").textContent=done;$("sLeft").textContent=L.length-done;$("sFound").textContent=S.f.length;
+  $("bFound").textContent=S.f.length;$("bDone").textContent=done;$("bAll").textContent=L.length;
+}
+
+function stepNode(s,key){
+  var n=el("div","step");n.appendChild(el("h4",null,s.t));n.appendChild(el("p",null,s.p));
+  if(s.x){var pre=el("pre",null,s.x);n.appendChild(pre);var cp=el("button","btn sm ghost","Copy");cp.type="button";cp.onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(s.x):Promise.reject()).then(function(){cp.textContent="Copied"},function(){var r=document.createRange();r.selectNodeContents(pre);var z=getSelection();z.removeAllRanges();z.addRange(r)})};n.appendChild(cp)}
+  if(s.k){var lk=el("div","links");s.k.forEach(function(x){var a=el("a",null,x.l);a.href=x.u;a.target="_blank";a.rel="noopener noreferrer";lk.appendChild(a)});n.appendChild(lk)}
+  var tr=el("label","check tr"),cb=el("input");cb.type="checkbox";cb.checked=!!S.sent[key];cb.onchange=function(){if(cb.checked)S.sent[key]=plus(s.w||14);else delete S.sent[key];save();renderReport()};
+  tr.appendChild(cb);tr.appendChild(el("span",null,S.sent[key]?"Sent. Follow up if you hear nothing by "+S.sent[key]+".":"Mark as sent"));n.appendChild(tr);
+  return n;
+}
+
+function renderReport(){
+  var c=S.c, kit=$("kit");kit.textContent="";
+  var items=S.f.map(function(f){return {f:f,label:(host(f.url)||"Finding")+" · "+TYPES[f.type]}}).concat(standard(c).map(function(s,i){return {f:{id:"std"+i,url:s.url,type:s.type},label:s.label}}));
+  if(!S.un){
+    var pay=el("div","pay");pay.appendChild(el("h3",null,S.f.length?("You found "+S.f.length+(S.f.length===1?" thing":" things")+". Here's how to get "+(S.f.length===1?"it":"them")+" down."):"The Takedown Kit"));
+    var ul=el("ul");["A ready-to-send request for every finding, with your details filled in","Where to send each one and which rule it relies on","People-search opt-outs, school directory opt-out, Google removal routes","Follow-up dates, so nothing gets ignored"].forEach(function(t){ul.appendChild(el("li",null,t))});pay.appendChild(ul);
+    var bt=el("a","btn wide",CHECKOUT?("Unlock the Takedown Kit · $"+PRICE):"Takedown Kit opens shortly");if(CHECKOUT){bt.href=CHECKOUT}else{bt.setAttribute("aria-disabled","true")}
+    pay.appendChild(bt);pay.appendChild(el("p","note","One payment, this device, every child in your family. 14-day refund."));kit.appendChild(pay);
+  }
+  items.forEach(function(it){
+    var card=el("div","card"+(S.un?"":" lock"));card.appendChild(el("h3",null,it.label));
+    if(it.f.url&&it.f.url.charAt(0)!=="[")card.appendChild(el("p","note",it.f.url));
+    var body=el("div",S.un?"":"blur");steps(it.f,c).forEach(function(s,i){body.appendChild(stepNode(s,it.f.id+":"+i))});
+    card.appendChild(body);kit.appendChild(card);
+  });
+  if(S.un){var pr=el("button","btn ghost wide","Print or save as PDF");pr.type="button";pr.onclick=function(){window.print()};kit.appendChild(pr)}
+}
+
+function show(){
+  var has=!!S.c;
+  ["hero","how","intake"].forEach(function(id){$(id).classList.toggle("hide",has)});
+  ["audit","report","bar","erase"].forEach(function(id){$(id).classList.toggle("hide",!has)});
+  if(has){renderChecks();renderReport()}
+}
+
+$("f").addEventListener("submit",function(e){
+  e.preventDefault();var fd=new FormData(e.target),v=function(k){return (fd.get(k)||"").toString().trim()};
+  if(!fd.get("guardian"))return;
+  S.c={first:v("first"),last:v("last"),nick:v("nick"),users:v("users").split(",").map(function(x){return x.trim().replace(/^@/,"")}).filter(Boolean).slice(0,4),age:v("age"),region:v("region"),city:v("city"),school:v("school"),team:v("team"),parent:v("parent")};
+  save();show();$("audit").scrollIntoView();
+});
+$("erase").addEventListener("click",function(){
+  if(!$("erase").dataset.sure){$("erase").dataset.sure="1";$("erase").textContent="Tap again to erase everything";return}
+  var un=S.un;try{localStorage.removeItem(KEY)}catch(e){}S={c:null,st:{},f:[],sent:{},un:un};save();delete $("erase").dataset.sure;$("erase").textContent="Erase my audit";show();window.scrollTo(0,0);
+});
+tryUnlock().then(show);
+})();
+</script>
+</body>
+</html>
